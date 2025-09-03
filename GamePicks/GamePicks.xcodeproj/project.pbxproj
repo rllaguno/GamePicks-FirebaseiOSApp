@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27D497152E678E51006DE632 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27D497142E678E51006DE632 /* FirebaseAuth */; };
+		27D497172E678E51006DE632 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 27D497162E678E51006DE632 /* FirebaseFirestore */; };
+		27D497192E678E51006DE632 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 27D497182E678E51006DE632 /* FirebaseFunctions */; };
+		27D4971C2E678E8C006DE632 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 27D4971B2E678E8C006DE632 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		27D496FA2E678836006DE632 /* GamePicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamePicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D497192E678E51006DE632 /* FirebaseFunctions in Frameworks */,
+				27D497152E678E51006DE632 /* FirebaseAuth in Frameworks */,
+				27D4971C2E678E8C006DE632 /* FirebaseCore in Frameworks */,
+				27D497172E678E51006DE632 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				27D496FC2E678836006DE632 /* GamePicks */,
+				27D4971A2E678E8C006DE632 /* Frameworks */,
 				27D496FB2E678836006DE632 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +55,13 @@
 				27D496FA2E678836006DE632 /* GamePicks.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		27D4971A2E678E8C006DE632 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +84,10 @@
 			);
 			name = GamePicks;
 			packageProductDependencies = (
+				27D497142E678E51006DE632 /* FirebaseAuth */,
+				27D497162E678E51006DE632 /* FirebaseFirestore */,
+				27D497182E678E51006DE632 /* FirebaseFunctions */,
+				27D4971B2E678E8C006DE632 /* FirebaseCore */,
 			);
 			productName = GamePicks;
 			productReference = 27D496FA2E678836006DE632 /* GamePicks.app */;
@@ -94,6 +117,9 @@
 			);
 			mainGroup = 27D496F12E678836006DE632;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27D496FB2E678836006DE632 /* Products */;
 			projectDirPath = "";
@@ -324,6 +350,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27D497142E678E51006DE632 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		27D497162E678E51006DE632 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		27D497182E678E51006DE632 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		27D4971B2E678E8C006DE632 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27D497132E678E51006DE632 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27D496F22E678836006DE632 /* Project object */;
 }
